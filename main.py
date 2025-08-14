@@ -2,8 +2,15 @@ from stats import (
     get_num_words,
     sort_characters
 )
+import sys
 
-filepath = "books/frankenstein.txt"
+args = sys.argv
+
+if len(args) < 2:
+        print(f"not enough arguments. expecting 2, got {len(args)}")
+        sys.exit(1)
+
+filepath = args[1]
 
 def main():
     book_text = get_book_text(filepath)
