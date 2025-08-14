@@ -7,7 +7,7 @@ import sys
 args = sys.argv
 
 if len(args) < 2:
-        print(f"not enough arguments. expecting 2, got {len(args)}")
+        print(f"Usage: python3 main.py <path_to_book>")
         sys.exit(1)
 
 filepath = args[1]
