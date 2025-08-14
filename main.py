@@ -27,4 +27,5 @@ def print_report(filepath, total_words, num_characters_sorted):
         print(f"{i['char']}: {i['num']}")
     print("============= END ===============")
 
-main()
+if __name__ == "__main__":
+    main()
