@@ -10,3 +10,12 @@ def get_num_characters(book_text):
         else:
             result[char] = 1
     return result
+
+def sort_key(item):
+    return item["num"]
+
+def sort_characters(book_text):
+    character_count = get_num_characters(book_text)
+    dictionaries = [{"char": k, "num": v} for k,v in character_count.items()]
+    dictionaries.sort(reverse=True, key=sort_key)
+    return dictionaries
